@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import '../../material/material.dart';
 import '../bottom_navigator_screen/list_widget.dart';
+import '../bottom_navigator_screen/news.dart';
 import '../bottom_navigator_screen/profile_widget.dart';
 
 class MainScreenWidget extends StatefulWidget {
@@ -11,7 +13,7 @@ class MainScreenWidget extends StatefulWidget {
 class _MainScreenWidgetState extends State<MainScreenWidget> {
   int _selectorTab = 1;
   static const List<Widget> _widgetOption = <Widget>[
-    Text('_'),
+    NewsWidget(),
     CarListWidgets(),
     UserProfileWidget()
   ];
@@ -29,7 +31,9 @@ class _MainScreenWidgetState extends State<MainScreenWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Головний екран'),
+        title: Container(
+            child: Image.network(
+                'https://www.pngplay.com/wp-content/uploads/13/Mercedes-Benz-Logo-Background-PNG-Image.png')),
         backgroundColor: Color.fromARGB(214, 0, 0, 0),
       ),
       body: Center(

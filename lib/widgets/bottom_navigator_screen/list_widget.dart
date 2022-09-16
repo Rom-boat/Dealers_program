@@ -147,11 +147,11 @@ class _CarListWidgetsState extends State<CarListWidgets> {
                                   ),
                                 ),
                               ),
-                              Center(
-                                child: Image.asset(car.imageName),
-                              ),
-                            ],
-                          ),
+                            FittedBox(
+                              fit: BoxFit.fitWidth,
+                              child: Image.asset(car.imageName),
+                            ),
+                          ],
                         ),
                       ),
                     ),

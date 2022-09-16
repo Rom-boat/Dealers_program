@@ -7,7 +7,6 @@ class UserProfileWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final padding = EdgeInsets.symmetric(horizontal: 20, vertical: 15);
     return Scaffold(
-      backgroundColor: Colors.grey.shade300,
       body: Container(
         child: SingleChildScrollView(
           child: Column(

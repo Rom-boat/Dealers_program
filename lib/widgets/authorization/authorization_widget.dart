@@ -73,7 +73,7 @@ class _FormWidgetState extends State<FormWidget> {
       TextEditingController(text: 'admin'); // password: 'admin'
   String? errorText;
   void _authorization() {
-    final login = _loginTextKontroler.text;
+    final login = _loginTextControler.text;
     final password = _passwordTextKontroler.text;
 
     if (login == 'admin' && password == 'admin') {
@@ -115,7 +115,7 @@ class _FormWidgetState extends State<FormWidget> {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         TextField(
@@ -130,11 +130,11 @@ class _FormWidgetState extends State<FormWidget> {
             ),
           ),
         ),
-        SizedBox(height: 25),
+        const SizedBox(height: 25),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
+            SizedBox(
               width: double.infinity,
               child: TextButton(
                 onPressed: _authorization,
