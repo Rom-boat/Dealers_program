@@ -31,10 +31,8 @@ class _MainScreenWidgetState extends State<MainScreenWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Container(
-            child: Image.network(
-                'https://www.pngplay.com/wp-content/uploads/13/Mercedes-Benz-Logo-Background-PNG-Image.png')),
-        backgroundColor: Color.fromARGB(214, 0, 0, 0),
+        title: const Text('Mercedes'),
+        backgroundColor: UIConstants.myColor,
       ),
       body: Center(
         child: _widgetOption[_selectorTab],
@@ -43,8 +41,8 @@ class _MainScreenWidgetState extends State<MainScreenWidget> {
         currentIndex: _selectorTab,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.chat),
-            label: 'Форум',
+            icon: Icon(Icons.newspaper_outlined),
+            label: 'Новини',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.home),

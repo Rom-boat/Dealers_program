@@ -20,7 +20,7 @@ class App extends StatelessWidget {
         '/Auth': (context) => AuthorizationWidget(),
         '/main_screen': (context) => MainScreenWidget(),
         '/error': (context) => FatalErorWidget(),
-        '/contacts' :(context) => ContactsWidget(),
+        '/contacts': (context) => ContactsWidget(),
         '/maybachclass': (context) => MaybachClassWidtet(),
       },
       initialRoute: '/Auth',

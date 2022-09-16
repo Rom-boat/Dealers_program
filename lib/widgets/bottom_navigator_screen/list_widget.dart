@@ -4,55 +4,59 @@ class Car {
   final String name;
   final String sum;
   final String imageName;
+  final String nameClas;
 
   Car({
     required this.name,
     required this.sum,
     required this.imageName,
+    required this.nameClas,
   });
 }
 
 final _cars = [
   Car(
-    name: 'Maybach GLS',
+    name: 'Maybach',
     sum: 'Від: 4 909 070.56 грн',
     imageName: 'images/60706d4506b18.png',
+    nameClas: '/maybachclass',
   ),
-  Car(
-    name: 'C-Клас Кабріо',
-    sum: 'Від: 1 322 238.83 грн',
-    imageName: 'images/606ed9343718d.png',
-  ),
-  Car(
-    name: 'GLC Купе',
-    sum: 'Від: 1 470 524.27 грн',
-    imageName: 'images/606ed8c0840f7.png',
-  ),
-  Car(
-    name: 'S-Клас Седан',
-    sum: 'Від: 3 078 958.47 грн',
-    imageName: 'images/606ed7e35b1b4.png',
-  ),
-  Car(
-    name: 'Vito Tourer',
-    sum: 'Від: 1 114 211.12 грн',
-    imageName: 'images/60b64938de78f.png',
-  ),
-  Car(
-    name: 'CLA Shooting Brake',
-    sum: 'Від: 953 981.40 грн',
-    imageName: 'images/606ed7fb08fec.png',
-  ),
-  Car(
-    name: 'G-Клас',
-    sum: 'Від: 3 581 271.11 грн',
-    imageName: 'images/606ed885e7f9a.png',
-  ),
-  Car(
-    name: 'E-Клас Купе',
-    sum: 'Від: 1 473 028.15 грн',
-    imageName: 'images/606ed83fca27f.png',
-  ),
+  // Car(
+  //   name: 'C-Клас Кабріо',
+  //   sum: 'Від: 1 322 238.83 грн',
+  //   imageName: 'images/606ed9343718d.png',
+  //   nameClas: '/sclass',
+  // ),
+  // Car(
+  //   name: 'GLC Купе',
+  //   sum: 'Від: 1 470 524.27 грн',
+  //   imageName: 'images/606ed8c0840f7.png',
+  // ),
+  // Car(
+  //   name: 'S-Клас Седан',
+  //   sum: 'Від: 3 078 958.47 грн',
+  //   imageName: 'images/606ed7e35b1b4.png',
+  // ),
+  // Car(
+  //   name: 'Vito Tourer',
+  //   sum: 'Від: 1 114 211.12 грн',
+  //   imageName: 'images/60b64938de78f.png',
+  // ),
+  // Car(
+  //   name: 'CLA Shooting Brake',
+  //   sum: 'Від: 953 981.40 грн',
+  //   imageName: 'images/606ed7fb08fec.png',
+  // ),
+  // Car(
+  //   name: 'G-Клас',
+  //   sum: 'Від: 3 581 271.11 грн',
+  //   imageName: 'images/606ed885e7f9a.png',
+  // ),
+  // Car(
+  //   name: 'E-Клас Купе',
+  //   sum: 'Від: 1 473 028.15 грн',
+  //   imageName: 'images/606ed83fca27f.png',
+  // ),
 ];
 
 class CarListWidgets extends StatefulWidget {
@@ -104,52 +108,53 @@ class _CarListWidgetsState extends State<CarListWidgets> {
                     const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 child: Stack(
                   children: [
-                    ConstrainedBox(
-                      constraints: BoxConstraints(maxWidth: 300),
-                      child: Container(
-                        child: DecoratedBox(
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Colors.black.withOpacity(0.2),
-                            ),
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(20),
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.1),
-                                blurRadius: 20,
-                              ),
-                            ],
+                    Container(
+                      child: DecoratedBox(
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.black.withOpacity(0.2),
                           ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 15, vertical: 15),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        car.name,
-                                        style: const TextStyle(
-                                            fontWeight: FontWeight.w500,
-                                            fontSize: 24),
-                                      ),
-                                      Text(
-                                        car.sum,
-                                        style: TextStyle(color: Colors.grey),
-                                      ),
-                                    ],
-                                  ),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(20),
+                          ),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              blurRadius: 20,
+                            ),
+                          ],
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 15, vertical: 15),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      car.name,
+                                      style: const TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 24),
+                                    ),
+                                    Text(
+                                      car.sum,
+                                      style: TextStyle(color: Colors.grey),
+                                    ),
+                                  ],
                                 ),
                               ),
-                            FittedBox(
-                              fit: BoxFit.fitWidth,
-                              child: Image.asset(car.imageName),
+                            ),
+                            Container(
+                              width: double.infinity,
+                              height: 170,
+                              child: FittedBox(
+                                fit: BoxFit.contain,
+                                child: Image.asset(car.imageName),
+                              ),
                             ),
                           ],
                         ),
@@ -157,7 +162,9 @@ class _CarListWidgetsState extends State<CarListWidgets> {
                     ),
                     InkWell(
                       borderRadius: BorderRadius.circular(20),
-                      onTap: () => print('hi'),
+                      onTap: () {
+                        Navigator.of(context).pushNamed(car.nameClas);
+                      },
                     ),
                   ],
                 ),

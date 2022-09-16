@@ -134,7 +134,7 @@ class ProfileBodyWidget extends StatelessWidget {
             ),
             title: Text('Контакти'),
             onTap: () {
-              print('Контакти');
+              Navigator.of(context).pushNamed('/contacts');
             },
           ),
           Divider(),

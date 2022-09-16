@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../material/material.dart';
+
 class AuthorizationWidget extends StatefulWidget {
   const AuthorizationWidget({Key? key}) : super(key: key);
 
@@ -12,10 +14,9 @@ class _ExemplState extends State<AuthorizationWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
-        title: Text('Авторизація'),
-        backgroundColor: Color.fromARGB(214, 0, 0, 0),
-      ),
+          centerTitle: true,
+          title: Text('Авторизація'),
+          backgroundColor: UIConstants.myColor),
       body: Container(
         padding: EdgeInsets.only(top: 100),
         child: SingleChildScrollView(
@@ -67,14 +68,14 @@ class FormWidget extends StatefulWidget {
 }
 
 class _FormWidgetState extends State<FormWidget> {
-  final _loginTextKontroler =
+  final _loginTextControler =
       TextEditingController(text: 'admin'); // login: 'admin'
-  final _passwordTextKontroler =
+  final _passwordTextControler =
       TextEditingController(text: 'admin'); // password: 'admin'
   String? errorText;
   void _authorization() {
     final login = _loginTextControler.text;
-    final password = _passwordTextKontroler.text;
+    final password = _passwordTextControler.text;
 
     if (login == 'admin' && password == 'admin') {
       errorText = null;
@@ -105,7 +106,7 @@ class _FormWidgetState extends State<FormWidget> {
             style: TextStyle(color: Colors.red),
           ),
         TextField(
-          controller: _loginTextKontroler,
+          controller: _loginTextControler,
           decoration: InputDecoration(
             hintText: 'Ім\'я',
             prefixIcon: Icon(Icons.person),
@@ -115,11 +116,11 @@ class _FormWidgetState extends State<FormWidget> {
             ),
           ),
         ),
-        const SizedBox(
+        SizedBox(
           height: 10,
         ),
         TextField(
-          controller: _passwordTextKontroler,
+          controller: _passwordTextControler,
           obscureText: true,
           decoration: InputDecoration(
             hintText: "Пароль",
@@ -130,11 +131,11 @@ class _FormWidgetState extends State<FormWidget> {
             ),
           ),
         ),
-        const SizedBox(height: 25),
+        SizedBox(height: 25),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(
+            Container(
               width: double.infinity,
               child: TextButton(
                 onPressed: _authorization,
