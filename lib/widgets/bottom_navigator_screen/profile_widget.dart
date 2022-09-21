@@ -122,7 +122,7 @@ class ProfileBodyWidget extends StatelessWidget {
             leading: Icon(Icons.discount, color: Colors.green),
             title: Text('Акції'),
             onTap: () {
-              print('Акції');
+              Navigator.of(context).pushNamed('/shares');
             },
           ),
           ListTile(

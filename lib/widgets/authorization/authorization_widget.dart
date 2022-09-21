@@ -155,27 +155,32 @@ class _FormWidgetState extends State<FormWidget> {
                 ),
               ),
             ),
-            SizedBox(height: 15),
-            Text(
-              'Не зареєстровані?',
-              style: TextStyle(fontSize: 15),
-            ),
-            TextButton(
-              onPressed: _registration,
-              style: ButtonStyle(
-                padding: MaterialStateProperty.all(
-                  EdgeInsets.zero,
+            Wrap(
+              children: [
+                Container(
+                  child: Text(
+                    'Не зареєстровані?',
+                    style: TextStyle(fontSize: 15),
+                  ),
                 ),
-                foregroundColor: MaterialStateProperty.all(Colors.black),
-                textStyle: MaterialStateProperty.all(
-                  TextStyle(fontSize: 15),
+                SizedBox(
+                  width: 7,
                 ),
-              ),
-              child: Text(
-                'Зареєструватися',
-                style: TextStyle(
-                    fontWeight: FontWeight.w500, color: Colors.red.shade600),
-              ),
+                Container(
+                  child: TextButton(
+                    onPressed: _registration,
+                    style: TextButton.styleFrom(
+                        minimumSize: Size.zero, padding: EdgeInsets.zero),
+                    child: Text(
+                      'Зареєструватися',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          color: Colors.red.shade600,
+                          fontSize: 15),
+                    ),
+                  ),
+                )
+              ],
             )
           ],
         ),
