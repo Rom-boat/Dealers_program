@@ -155,12 +155,9 @@ class _FormWidgetState extends State<FormWidget> {
                 ),
               ),
             ),
-<<<<<<< HEAD
             SizedBox(
               height: 7,
             ),
-=======
->>>>>>> 2411080 (feat-fix:)
             Wrap(
               children: [
                 Container(
