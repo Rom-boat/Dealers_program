@@ -113,7 +113,7 @@ class ProfileBodyWidget extends StatelessWidget {
                 Icon(Icons.card_travel_rounded, color: Colors.red.shade200),
             title: Text('Аксесуари'),
             onTap: () {
-              print('Аксесуари');
+              Navigator.of(context).pushNamed('/accessories');
             },
           ),
           ListTile(

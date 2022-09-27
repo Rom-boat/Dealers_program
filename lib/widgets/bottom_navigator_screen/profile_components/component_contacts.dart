@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/icons/flutter_icons.dart';
 
+import '../../../material/material.dart';
+
 class ContactsWidget extends StatelessWidget {
   const ContactsWidget({Key? key}) : super(key: key);
 
@@ -8,6 +10,7 @@ class ContactsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: UIConstants.appbarTitle,
         backgroundColor: Colors.black,
       ),
       body: Container(
