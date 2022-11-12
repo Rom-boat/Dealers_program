@@ -63,24 +63,3 @@ class _MainScreenWidgetState extends State<MainScreenWidget> {
     );
   }
 }
-//  bottomNavigationBar: CurvedNavigationBar(
-//         backgroundColor: Colors.white,
-//         color: Colors.black,
-//         items: [
-//           Icon(
-//             Icons.favorite,
-//             color: Colors.white,
-//           ),
-//           Icon(
-//             Icons.face,
-//             color: Colors.white,
-//           ),
-//           Icon(
-//             Icons.settings,
-//             color: Colors.white,
-//           ),
-//         ],
-//         onTap: (index) {
-//           print("object");
-//         },
-//       ),
